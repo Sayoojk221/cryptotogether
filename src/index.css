@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,700;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --bg-color: #f1f5f9;
+    --text-color: #273240;
+    --text-color-light: #c9ced3;
+    --text-count:#ef5959;
+    --text-active: white;
+    --box-bg-active: black;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+    --font-size-xl: 22px;
+    --icon-size:23px;
+}
+
+
+
+
+.sidebar {
+    position: absolute;
+    background-color: white;
+    width: 260px;
+    height: calc(100% - 20px);
+    padding: 30px;
+}
+
+.dashboard {
+    position: relative;
+    width: calc(100% - 260px);
+    left: 260px;
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+
+.sidebar .logo {
+    display: flex;
+    height: calc(100% - 90%);
+    justify-content: center;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.logo .company__name {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+.sidebar .menu {
+    height: calc(100% - 20%);
+}
+
+.menu .nav .nav__heading {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.nav__lists{
+    min-height: 300px;
+}
+
+
+.nav .nav__lists li{
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    
+}
+
+.nav .nav__lists li i{
+    font-size: var(--icon-size);
+    margin-right: 10px;
+}
+
+.nav .nav__lists .nav__text{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.nav__lists .link{
+    border-radius: 10px;
+    transition: 350ms background linear;
+    color: var(--text-color-light) ;
+}
+
+.nav__lists .link:hover{
+    background-color: var(--box-bg-active);
+
+    color: white !important;
+    cursor: pointer;
+}
+
+.nav__lists .nav__extra{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav__lists .nav__extra .count{
+    color: var(--text-count);
+    font-weight: 700;
 }
