@@ -42,7 +42,7 @@
 
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     background-color: white;
     width: 260px;
     height: calc(100% - 20px);
@@ -152,22 +152,17 @@
 
 .header__title .welcome__text {
     color: var(--text-color-light);
-    font-size: 17px;
     margin: 3px 0;
     font-weight: 800;
 }
 
 .header__title .page__name {
-
-    font-size: 31px;
     color: var(--text-color);
     font-weight: 900;
     font-family: 'Open Sans';
 }
 
-.user__account .search__icon i {
-    font-size: var(--font-size-xxl);
-}
+
 
 .user__account .avatar img {
     width: 50px;
@@ -178,6 +173,7 @@
 
 .section {
     margin-block: var(--section-margin-block);
+    width: fit-content;
 }
 
 .section .section__title {
@@ -187,13 +183,15 @@
 }
 
 .section .section__content {
-    margin-inline: var(--section-margin-inline);
+    /* margin-inline: var(--section-margin-inline); */
     margin-block: 1rem;
 }
 
 .wallet {
     display: flex;
     align-items: center;
+
+
 }
 
 .wallet .current__balance {
@@ -234,12 +232,10 @@
     font-weight: bold;
 }
 
-.wallet .wallet__action {
+/* .wallet .wallet__action {
     margin-inline: 2rem;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    column-gap: 1.5rem;
-}
+
+} */
 
 .icon__container {
     width: 100px;
@@ -268,13 +264,13 @@
 }
 
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
     .wallet {
-        flex-direction: column;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3);
     }
 
-}
+} */
 
 
 @media (max-width: 1000px) {

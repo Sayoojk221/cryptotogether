@@ -7,6 +7,7 @@ function Content() {
     <div className="dashboard">
       <Header />
       <Wallet />
+      
     </div>
   );
 }

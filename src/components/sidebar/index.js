@@ -3,7 +3,7 @@ import logo from "../../images/logo.PNG";
 
 function SideBar() {
   return (
-    <div className="sidebar">
+    <div className="sidebar ">
       <div className="logo">
         <img src={logo} alt="logo" />
         <p className="company__name">Cryptotogether</p>

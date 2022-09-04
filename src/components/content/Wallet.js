@@ -10,8 +10,8 @@ import Section from "../common/Section";
 function Wallet() {
   return (
     <Section title={"Your Wallet"}>
-      <div className="wallet">
-        <div className="current__balance">
+      <div className="wallet max-h-full flex flex-col justify-center items-center  md:flex-row ">
+        <div className="current__balance ">
           <span className="balance__title">current balance</span>
           <span className="blance__amount">$58,072.25</span>
           <div className="balance__rating">
@@ -22,7 +22,7 @@ function Wallet() {
             <span className="rating__amount">(+532.23)</span>
           </div>
         </div>
-        <div className="wallet__action">
+        <div className=" grid grid-cols-2 md:grid-cols-4  gap-2 mx-10 mt-10 md:mt-0 ">
             <Icon icon={price} title='Price alert'/>
             <Icon icon={compare} title='Compare'/>
             <Icon icon={convert} title='Convert'/>
